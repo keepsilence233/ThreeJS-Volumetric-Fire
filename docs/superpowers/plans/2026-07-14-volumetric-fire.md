@@ -215,7 +215,7 @@ git add README.md LICENSE docs/superpowers/plans/2026-07-14-volumetric-fire.md
 git commit -m "docs: add usage and attribution"
 ```
 
-- [ ] **Step 6: Create and push the public repository**
+- [x] **Step 6: Create and push the public repository**
 
 Run:
 
