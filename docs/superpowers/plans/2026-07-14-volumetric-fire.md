@@ -1,6 +1,6 @@
 # Volumetric Fire Implementation Plan
 
-> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
+> **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [x]`) syntax for tracking.
 
 **Goal:** Build and publish a standalone Vite project matching the Three.js r185 WebGPU volumetric fire example with all original interactions.
 
@@ -40,7 +40,7 @@
 - Consumes: Three.js package exports `three/webgpu`, `three/tsl`, and `three/addons/*` at version `0.185.0`.
 - Produces: Vite entry page at `/`, scripts `npm test`, `npm run dev`, `npm run build`, and `npm run preview`.
 
-- [ ] **Step 1: Add the failing smoke test**
+- [x] **Step 1: Add the failing smoke test**
 
 ```js
 import assert from 'node:assert/strict';
@@ -62,13 +62,13 @@ test('keeps the complete volumetric fire interaction', async () => {
 });
 ```
 
-- [ ] **Step 2: Run the test and confirm the missing app fails**
+- [x] **Step 2: Run the test and confirm the missing app fails**
 
 Run: `node --test test/project.test.mjs`
 
 Expected: FAIL with `ENOENT` for `index.html` or `src/main.js`.
 
-- [ ] **Step 3: Add the package manifest**
+- [x] **Step 3: Add the package manifest**
 
 ```json
 {
@@ -91,7 +91,7 @@ Expected: FAIL with `ENOENT` for `index.html` or `src/main.js`.
 }
 ```
 
-- [ ] **Step 4: Adapt the official r185 example without rewriting its solver**
+- [x] **Step 4: Adapt the official r185 example without rewriting its solver**
 
 Use the exact upstream files:
 
@@ -113,7 +113,7 @@ cp /tmp/example.css src/style.css
 
 Expected: `src/main.js` contains every upstream import, constant, compute pass, scene setup, GUI folder, control, resize handler, and animation function; `index.html` contains no import map or inline module.
 
-- [ ] **Step 5: Install and verify the app**
+- [x] **Step 5: Install and verify the app**
 
 Run: `npm_config_cache=/tmp/npm-cache npm install`
 
@@ -123,7 +123,7 @@ Run: `npm test && npm run build`
 
 Expected: one test passes; Vite emits `dist/index.html` and bundled assets without errors.
 
-- [ ] **Step 6: Commit the working application**
+- [x] **Step 6: Commit the working application**
 
 ```bash
 git add package.json package-lock.json index.html src test
@@ -143,7 +143,7 @@ git commit -m "feat: add WebGPU volumetric fire demo"
 - Consumes: Task 1's `npm test`, `npm run build`, and `npm run dev` commands.
 - Produces: documented public GitHub repository with `origin/main` tracking the local `main` branch.
 
-- [ ] **Step 1: Add README documentation**
+- [x] **Step 1: Add README documentation**
 
 ```markdown
 # Three.js Volumetric Fire
@@ -177,7 +177,7 @@ npm run build
 Adapted from the MIT-licensed [Three.js r185 volumetric fire example](https://github.com/mrdoob/three.js/blob/r185/examples/webgpu_volume_fire.html).
 ```
 
-- [ ] **Step 2: Add the upstream MIT license**
+- [x] **Step 2: Add the upstream MIT license**
 
 Copy the exact r185 license:
 
@@ -187,7 +187,7 @@ curl -fsS https://raw.githubusercontent.com/mrdoob/three.js/r185/LICENSE -o /tmp
 
 Save that content unchanged as `LICENSE`.
 
-- [ ] **Step 3: Verify behavior in a real browser**
+- [x] **Step 3: Verify behavior in a real browser**
 
 Run: `npm run dev -- --host 127.0.0.1`
 
@@ -200,13 +200,13 @@ Open the printed URL in a WebGPU-capable browser and verify:
 - Resizing the viewport keeps a full-screen canvas.
 - Browser console contains no application errors.
 
-- [ ] **Step 4: Run final automated verification**
+- [x] **Step 4: Run final automated verification**
 
 Run: `npm test && npm run build && git diff --check`
 
 Expected: one test passes, the build succeeds, and `git diff --check` prints nothing.
 
-- [ ] **Step 5: Commit documentation and the checked plan**
+- [x] **Step 5: Commit documentation and the checked plan**
 
 Mark all completed plan checkboxes, then run:
 
