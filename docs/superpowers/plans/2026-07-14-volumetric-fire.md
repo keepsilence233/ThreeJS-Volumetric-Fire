@@ -13,7 +13,7 @@
 - Preserve WebGPU fluid fire, draggable teapot turbulence, orbit camera, and parameter controls.
 - Pin `three` to exactly `0.185.0`.
 - Add no framework, backend, routing, fallback renderer, or unrelated UI.
-- Deliver a public `keepsilence233/ThreeJS-Volumetric-Fire` repository from `~/github/repositores/ThreeJS-Volumetric-Fire` on `main`.
+- Deliver a public `keepsilence233/ThreeJS-Volumetric-Fire` repository from `~/github/Repositories/ThreeJS-Volumetric-Fire` on `main`.
 
 ## File map
 

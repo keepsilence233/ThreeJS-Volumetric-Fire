@@ -34,4 +34,4 @@ If WebGPU is unavailable, Three.js's WebGPU capability message remains visible i
 
 ## Delivery
 
-Create the local repository at `~/github/repositores/ThreeJS-Volumetric-Fire`, commit the completed project on `main`, create a public GitHub repository under `keepsilence233`, and push `main` with `gh`.
+Create the local repository at `~/github/Repositories/ThreeJS-Volumetric-Fire`, commit the completed project on `main`, create a public GitHub repository under `keepsilence233`, and push `main` with `gh`.
